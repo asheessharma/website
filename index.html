@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nevigation</title>
+    <style>
+        .navbar {
+            background-color: transparent;
+            border-radius: 4px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            display: flex;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            padding: 3px;
+            margin: 13px 20px;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: grey;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 3px 4px;
+            width: 120px;
+        }
+
+        #logo {
+            width: 90px;
+            height: 90px;
+            background-color: rgb(243, 16, 92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        h1 {
+            font-weight: bold;
+            color: white;
+        }
+
+        #header {
+            position: sticky;
+            top: 0;
+            display: flex;
+        }
+
+        .section {
+            /* width: 100%;
+            height: 250px; */
+            display: flex;
+            justify-content: center;
+            background-color: transparent;
+            align-items: center;
+            /* padding: 40px; */
+        }
+
+        h4 {
+            color: grey;
+            display: flex;
+        }
+
+        .section img {
+            height: 500px;
+            width: 100%;
+            display: flex;
+            float: right;
+            margin-right: 5px solid white;
+            margin-bottom: 5px solid white;
+        }
+
+        #footer {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #footer h1 {
+            display: inline-block;
+        }
+
+        #footer #name {
+            margin-left: 50px;
+        }
+
+        #footer #date {
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body onload="show()">
+    <header id="header">
+        <DIV ID="logo">
+            <h1>R</h1>
+        </DIV>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#"><span style="color: rgb(225, 80, 104);">HOME</span></a></li>
+                <li><a href="#">PROJECT</a></li>
+                <li><a href="#">PAGES</a></li>
+                <li><a href="#">ELEMENTS</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="section">
+        <div id="banner">
+            <h4><span style="color: rgb(238, 86, 111);">70% off</span> for first 3 months</h4>
+            <p style="font-size: 80px; width: 50%;"> Digital Agency With Excellence Services.
+
+            <h4>The 3 golden rules professional graphic designer don't</h4>
+
+        </div>
+        <img src="https://img.freepik.com/free-vector/job-interview-conversation_74855-7566.jpg?size=626&ext=jpg"
+            alt="">
+        </p>
+    </div>
+    <div id="footer">
+        <h3 id="name">StudentName</h3>
+        <h3 id="rollno">Rollno</h3>
+        <h3 id="college">College</h3>
+        <h3 id="date">Date</h3>
+    </div>
+
+    <script>
+        var Name = document.getElementById("name");
+        var RollNo = document.getElementById("rollno");
+        var College = document.getElementById("college");
+        var date1 = document.getElementById("date");
+
+        let date = new Date();
+
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+        let currentDate = `${day}-${month}-${year}`;
+
+        function show() {
+            Name.innerText = "[Asheesh]";
+            RollNo.innerText = "[201500162]";
+            College.innerText = "[GLA University]"
+            date1.innerText = currentDate;
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
